@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "ad9cd676-79a6-40e9-b1c4-6c022e06acab",
+		"name": "covid-test-process-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Hospital list by city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/covidtest/hospital?city=kanpur",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidtest",
+						"hospital"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "kanpur"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get test slots Hospital by city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/covidtest/hospital/a052w00000BeCoVAAV/slots",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidtest",
+						"hospital",
+						"a052w00000BeCoVAAV",
+						"slots"
+					],
+					"query": [
+						{
+							"key": "slotDate",
+							"value": "2021-05-01",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book test slot",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "patientID",
+						"value": "a042w00000dfJDLAA2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/covidtest/hospital/a052w00000BeCoVAAV/slots/Slot-003",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidtest",
+						"hospital",
+						"a052w00000BeCoVAAV",
+						"slots",
+						"Slot-003"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Booked slots by hospital id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/covidtest/hospital/a052w00000BeCoVAAV/bookedSlots?slotDate=2021-05-05",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidtest",
+						"hospital",
+						"a052w00000BeCoVAAV",
+						"bookedSlots"
+					],
+					"query": [
+						{
+							"key": "slotDate",
+							"value": "2021-05-05"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Test results by test id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/covidtest/TEST-00036",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidtest",
+						"TEST-00036"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update test result",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"result\" : \"Positive\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/covidtest/TEST-00036",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidtest",
+						"TEST-00036"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

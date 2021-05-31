@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "90d096fb-4a3c-40c8-9d7f-aef0b49058a1",
+		"name": "covid-assist-exp-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TEST - Get Hospital list by city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/covidassist/exp/test/search/hospital?city=kanpur",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidassist",
+						"exp",
+						"test",
+						"search",
+						"hospital"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "kanpur"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Get test slots Hospital by city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}api/covidassist/exp/test/a052w00000BeCoVAAV/slot",
+					"host": [
+						"{{host}}api"
+					],
+					"path": [
+						"covidassist",
+						"exp",
+						"test",
+						"a052w00000BeCoVAAV",
+						"slot"
+					],
+					"query": [
+						{
+							"key": "slotDate",
+							"value": "2021-05-28",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Book test slot",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "patientID",
+						"value": "a042w00000dfJDLAA2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/covidassist/exp/test/a052w00000BeCoVAAV/bookslot/Slot-003",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidassist",
+						"exp",
+						"test",
+						"a052w00000BeCoVAAV",
+						"bookslot",
+						"Slot-003"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Get Booked slots by hospital id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/covidassist/exp/test/a052w00000BeCoVAAV/bookslot?slotDate=2021-05-05",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidassist",
+						"exp",
+						"test",
+						"a052w00000BeCoVAAV",
+						"bookslot"
+					],
+					"query": [
+						{
+							"key": "slotDate",
+							"value": "2021-05-05"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Get Test results by test id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/covidassist/exp/test/result/TEST-00036",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidassist",
+						"exp",
+						"test",
+						"result",
+						"TEST-00036"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TEST - Update test result",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"result\" : \"Positive\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/covidassist/exp/test/result/TEST-00036",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidassist",
+						"exp",
+						"test",
+						"result",
+						"TEST-00036"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Sachin\",\r\n  \"lastName\": \"Sharma2\",\r\n  \"gender\": \"male\",\r\n  \"email\": \"sachinsharma9998@gmail.com\",\r\n  \"contact\": \"9876543210\",\r\n  \"age\": 23,\r\n  \"Address\": \"Rajpura, Punjab\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/covidassist/exp/register",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidassist",
+						"exp",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VACCINE - Get Hospital list by city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/covidassist/exp/vaccine/search/hospital?city=kanpur",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidassist",
+						"exp",
+						"vaccine",
+						"search",
+						"hospital"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "kanpur"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VACCINE- Get vaccine slots Hospital by city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/covidassist/exp/vaccine/a052w00000BeDRbAAN/slot",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidassist",
+						"exp",
+						"vaccine",
+						"a052w00000BeDRbAAN",
+						"slot"
+					],
+					"query": [
+						{
+							"key": "slotDate",
+							"value": "2021-05-28",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VACCINE- Book vaccine slot",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "patientID",
+						"value": "a042w00000dfJDLAA2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/covidassist/exp/vaccine/a052w00000BeCoVAAV/bookslot/VS-004",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidassist",
+						"exp",
+						"vaccine",
+						"a052w00000BeCoVAAV",
+						"bookslot",
+						"VS-004"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VACCINE- Get Booked Slots by hospital Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/covidassist/exp/vaccine/a052w00000BeCoVAAV/bookslot?slotDate=2021-05-05",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"covidassist",
+						"exp",
+						"vaccine",
+						"a052w00000BeCoVAAV",
+						"bookslot"
+					],
+					"query": [
+						{
+							"key": "slotDate",
+							"value": "2021-05-05"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

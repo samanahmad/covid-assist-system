@@ -1,0 +1,693 @@
+{
+	"info": {
+		"_postman_id": "de185ba5-7c59-4f5c-8ac7-6ba7259440f8",
+		"name": "covid-assist-system-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/api/covidTest/hospital/a052w00000BeCoVAAV/bookedSlots?slotDate=2021-05-05",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/api/Test/hospital/a052w00000BeCoVAAV/bookedSlots?slotDate=2021-05-05",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"Test",
+						"hospital",
+						"a052w00000BeCoVAAV",
+						"bookedSlots"
+					],
+					"query": [
+						{
+							"key": "slotDate",
+							"value": "2021-05-05"
+						}
+					]
+				},
+				"description": "to see the booked slots for a particular date in a hospital"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/patient?patientId=a042w00000df1n4AAA",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/api/patient?patientId=a042w00000df1n4AAA",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"patient"
+					],
+					"query": [
+						{
+							"key": "patientId",
+							"value": "a042w00000df1n4AAA"
+						}
+					]
+				},
+				"description": "To fetch patient details using patient ID"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/patient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"shikha\",\r\n  \"lastName\": \"pathak\",\r\n  \"gender\": \"female\",\r\n  \"email\": \"shikha@gmail.com\",\r\n  \"contact\": \"9345200481\",\r\n  \"age\": 23,\r\n  \"Address\": \"delhi\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/api/patient",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"patient"
+					]
+				},
+				"description": "Adding patient records to the patient table"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/patient?patientId=a042w00000dfGbxAAE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/api/patient?patientId=a042w00000dfGbxAAE",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"patient"
+					],
+					"query": [
+						{
+							"key": "patientId",
+							"value": "a042w00000dfGbxAAE"
+						}
+					]
+				},
+				"description": "To delete patient record from the table"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/patient?patientId=a042w00000dfGcHAAU",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"shikha\",\r\n  \"lastName\": \"pathak\",\r\n  \"gender\": \"female\",\r\n  \"email\": \"shikhapathak@gmail.com\",\r\n  \"contact\": \"9345200481\",\r\n  \"age\": 23,\r\n  \"Address\": \"delhi\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/api/patient?patientId=a042w00000dfGcHAAU",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"patient"
+					],
+					"query": [
+						{
+							"key": "patientId",
+							"value": "a042w00000dfGcHAAU"
+						}
+					]
+				},
+				"description": "To update a patient details"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/hospital",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/api/hospital",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"hospital"
+					]
+				},
+				"description": "To get the list of the hospital"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/hospital",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"HospitalName\": \"Batra Hospital\",\r\n  \"contact\": \"1111111111\",\r\n  \"Address\": \"120, jamia\",\r\n  \"city\": \"Lucknow\",\r\n  \"state\": \"UP\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/api/hospital",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"hospital"
+					]
+				},
+				"description": "To add a hospital into the hospital table"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/hospital?HospitalId=a052w00000BeQvwAAF",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/api/hospital?HospitalId=a052w00000BeQvwAAF",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"hospital"
+					],
+					"query": [
+						{
+							"key": "HospitalId",
+							"value": "a052w00000BeQvwAAF"
+						}
+					]
+				},
+				"description": "To delete a hospital from the table"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/hospital?HospitalId=a052w00000BeQw6AAF",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"HospitalName\": \"abc1 Hospital\",\r\n  \"contact\": \"1111111111\",\r\n  \"Address\": \"120, Mathura Rd, Pocket Z, Okhla Phase II\",\r\n  \"city\": \"lucknow\",\r\n  \"state\": \"UP\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/api/hospital?HospitalId=a052w00000BeQw6AAF",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"hospital"
+					],
+					"query": [
+						{
+							"key": "HospitalId",
+							"value": "a052w00000BeQw6AAF"
+						}
+					]
+				},
+				"description": "To update the hospital details"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/hospital/lucknow",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/api/hospital/lucknow",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"hospital",
+						"lucknow"
+					]
+				},
+				"description": "To get the list of hospital in a city\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/a052w00000BeCoVAAV/testSlot",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/api/a052w00000BeCoVAAV/testSlot",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"a052w00000BeCoVAAV",
+						"testSlot"
+					]
+				},
+				"description": "To see the covid test slots in a hospital and it's capacity"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/a052w00000BeCoVAAV/vaccineSlot",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/api/a052w00000BeCoVAAV/vaccineSlot",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"a052w00000BeCoVAAV",
+						"vaccineSlot"
+					]
+				},
+				"description": "To see the vaccine slots in a hospital and it's capacity"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/a052w00000BeCoVAAV/testSlot/Slot-003?patientId=a042w00000dfGcHAAU",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/api/a052w00000BeCoVAAV/testSlot/Slot-003?patientId=a042w00000dfGcHAAU",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"a052w00000BeCoVAAV",
+						"testSlot",
+						"Slot-003"
+					],
+					"query": [
+						{
+							"key": "patientId",
+							"value": "a042w00000dfGcHAAU"
+						}
+					]
+				},
+				"description": "To book slot for covid test"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/a052w00000BeCozAAF/vaccineSlot/VS-003?patientId=a042w00000dfGcHAAU",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/api/a052w00000BeCozAAF/vaccineSlot/VS-003?patientId=a042w00000dfGcHAAU",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"a052w00000BeCozAAF",
+						"vaccineSlot",
+						"VS-003"
+					],
+					"query": [
+						{
+							"key": "patientId",
+							"value": "a042w00000dfGcHAAU"
+						}
+					]
+				},
+				"description": "To book slot for vaccination"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/Vaccine/hospital/a052w00000BeCozAAF/bookedSlots?slotDate=2021-05-06",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/api/Vaccine/hospital/a052w00000BeCozAAF/bookedSlots?slotDate=2021-05-06",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"Vaccine",
+						"hospital",
+						"a052w00000BeCozAAF",
+						"bookedSlots"
+					],
+					"query": [
+						{
+							"key": "slotDate",
+							"value": "2021-05-06"
+						}
+					]
+				},
+				"description": "To see the booked vaccine slots for a particular date in a hospital"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/Test/TEST-00007",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/api/Test/TEST-00007",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"Test",
+						"TEST-00007"
+					]
+				},
+				"description": "to fetch result and other details using covidtestID"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/patient/a042w00000df1pNAAQ/result",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/api/patient/a042w00000df1pNAAQ/result",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"patient",
+						"a042w00000df1pNAAQ",
+						"result"
+					]
+				},
+				"description": "To fetch all the covidtest result using patientId"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/Test/TEST-00012",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text"
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"result\": \"Positive\"\r\n}"
+				},
+				"url": {
+					"raw": "http://{{host}}/api/Test/TEST-00012",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"Test",
+						"TEST-00012"
+					]
+				},
+				"description": "updating result of the covid test using covidtestId"
+			},
+			"response": []
+		}
+	]
+}

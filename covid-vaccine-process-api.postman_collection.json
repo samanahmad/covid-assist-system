@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "193ef842-5152-4038-b367-9faeebb7f9ca",
+		"name": "covid-vaccine-process-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/api/vaccine/hospital/a052w00000BeDRbAAN/bookedSlots?slotDate=2021-05-14",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "patientID",
+						"value": "a042w00000dfLDCAA2",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "client_id",
+						"value": "036d2ed16d1844b997bc806aa1c056fe",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "client_secret",
+						"value": "B0f583BD53e3456da103F7cA37FD3560",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/api/vaccine/hospital/a052w00000BeDRbAAN/bookedSlots?slotDate=2021-05-14",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vaccine",
+						"hospital",
+						"a052w00000BeDRbAAN",
+						"bookedSlots"
+					],
+					"query": [
+						{
+							"key": "slotDate",
+							"value": "2021-05-14"
+						},
+						{
+							"key": "patientID",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/vaccine/hospital/lucknow",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/api/vaccine/hospital/lucknow",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vaccine",
+						"hospital",
+						"lucknow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/vaccine/hospital/a052w00000BeDRbAAN/slots",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}/api/vaccine/hospital/a052w00000BeDRbAAN/slots",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vaccine",
+						"hospital",
+						"a052w00000BeDRbAAN",
+						"slots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/api/vaccine/hospital/a052w00000BeDRbAAN/slots/VS-004",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "patientID",
+						"value": "a042w00000dfLDCAA2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}/api/vaccine/hospital/a052w00000BeDRbAAN/slots/VS-004",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"vaccine",
+						"hospital",
+						"a052w00000BeDRbAAN",
+						"slots",
+						"VS-004"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
